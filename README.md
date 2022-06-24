@@ -28,10 +28,7 @@ React Developer Tools
 $ npx create-react-app reactjs-frontend-registration
 
 ### Go to app directory
-$ cd reactjs-frontend-restaurant
-
-### Install react-icons
-$ npm install react-icons
+$ cd reactjs-frontend-registration
   
 ### Start app open (http://localhost:3000) to view it in your browser after run below command. 
 $ npm start
