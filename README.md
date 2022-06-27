@@ -27,6 +27,9 @@ React Developer Tools
 ### Install react app
 $ npx create-react-app reactjs-frontend-registration
 
+### Install react icons
+$ npm install react-icons --save
+
 ### Go to app directory
 $ cd reactjs-frontend-registration
   

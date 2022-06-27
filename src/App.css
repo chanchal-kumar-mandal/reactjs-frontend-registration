@@ -1,29 +1,122 @@
 .App {
   display: flex;
   flex-direction: row;
-  height: 100vh;
-  font-size: 14px;
+  font-size: 12px;
+  background-color: #f9f9f9;
 }
 
 .leftContainer {
   width: 65%;
+  padding-bottom: 5rem;
+}
+
+.registrationContainer {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.stepContainer {
   display: flex;
-  justify-content: center;
+  justify-content: end;
+  margin: 2rem 2rem 8rem 2rem;
+  font-size: 10px;
+  font-weight: bold;
+  color: #343434;
+}
+
+.step {
+  height: 4px;
+  width: 4px;
+  margin: 5px 4px;
+  background-color: #aaa;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  background-color: #333;
+}
+
+.signIn {
+  margin: 2rem 0;
+}
+
+.registrationContainer a {
+  font-weight: bold;
+  color: #286efa;
+  text-decoration: none;
 }
 
 .formContainer {
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
   row-gap: 2em;
 }
 
-.formContainer input, 
-.formContainer button  {
-  width: 350px;
-  height: 14px;
-  padding: 10px;
+.formContainer input {
+  width: 360px;
+  height: 16px;
+  padding: 11px;
+  background-color: #f9f9f9;
+}
+
+.formContainer select {
+  background-color: #f9f9f9;
+  padding-left: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.formContainer input,
+.formContainer select,
+.formContainer button {
+  color: #9a9a9a;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+}
+
+.formContainer select,
+.formContainer button {
+  width: 380px;
+  height: 38px;
+}
+
+.helpText {
+  margin-top: -1rem;
+  font-size: 10px;
+  color: #868686;
+}
+
+.formContainer button {
+  background-color: #ededed;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.formContainer input:hover,
+.formContainer select:hover,
+.formContainer button:hover {
+  border: 1px solid #595656;
+}
+
+.iconContainer {
+  margin-top: -35px;
+}
+
+.icon {
+  position: relative;
+  top: 15px;
+  left: 360px;
+}
+
+.termsContainer {
+  font-size: 10px;
+  line-height: 18px;
 }
 
 .rightContainer {
@@ -31,23 +124,72 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
   box-sizing: border-box;      
   color: #FFF;
-  background-color: rgb(40, 110, 250);
+  background-color: #286efa;
 }
 
-.dummyContent {
+.dummyContainer {
   width: 50%;
   padding:0 25%;
 }
 
-.dummyContent h2 {
+.dummyContainer h1 {
   text-align: center;
 }
 
-.dummyContent p {
+.dummyContainer p {
   margin-top: 4rem;
+  font-size: 13px;
   line-height: 22px;
+}
+
+/* Responsive CSS */
+
+@media screen and (max-width: 900px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .leftContainer, .rightContainer {
+    width: 100%;
+    padding: 3rem 0;
+  }
+
+  .stepContainer {
+    justify-content: center;
+    margin: 0 auto 3rem;
+  }
+
+  .dummyContainer p {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .registrationContainer {
+    width: 80%;
+  }
+
+  .App h1 {
+    font-size: 18px;
+  }
+
+  .formContainer input {
+    width: 90%;
+    padding: 11px 5%;
+  }
+
+  .formContainer select,
+  .formContainer button {
+    width: 100%;
+  }
+
+  .icon {
+    left: 90%;
+  }
 }
 
